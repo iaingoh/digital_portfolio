@@ -7,4 +7,4 @@ def portfolio_view(request):
     # TODO: query all Project models
     # eg. projects = Project.objects.all()
     # TODO: loop through all projects
-    return HttpResponse("Hello World")
+    return render(request, 'index.html')
