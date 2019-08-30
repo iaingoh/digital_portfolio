@@ -7,11 +7,11 @@ class ProjectSerializer(serializers.ModelSerializer):
         model = Project
         fields = '__all__'
 
-class ProjectSubtitleSerializer(serializers.ModelSerializer):
+# class ProjectSubtitleSerializer(serializers.ModelSerializer):
 
-    class Meta:
-        model = ProjectSubtitle
-        fields = '__all__'
+#     class Meta:
+#         model = ProjectSubtitle
+#         fields = '__all__'
 
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
