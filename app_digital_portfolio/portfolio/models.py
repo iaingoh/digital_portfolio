@@ -18,4 +18,15 @@ class ProjectSubtitle(models.Model):
     # List of bullet points
     
     def __str__(self):
-        return self.title
+        return self.description
+
+class BulletPoint(models.Model):
+    subtitle = models.ForeignKey(
+        ProjectSubtitle,
+        on_delete=models.CASCADE
+    )
+    description = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.description
+    
