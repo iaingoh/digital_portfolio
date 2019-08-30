@@ -1,3 +1,5 @@
+db.sqlite3
 .idea/*
 __pycache__/
 .vscode/*
+app_digital_portfolio/portfolio/migrations/
