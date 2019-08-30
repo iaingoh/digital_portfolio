@@ -17,5 +17,5 @@ class ProjectSubtitle(models.Model):
     description = models.CharField(max_length=100)
     # List of bullet points
     
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #     return self.title
