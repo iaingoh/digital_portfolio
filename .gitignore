@@ -3,3 +3,4 @@ db.sqlite3
 __pycache__/
 .vscode/*
 app_digital_portfolio/portfolio/migrations/
+*.jpeg
