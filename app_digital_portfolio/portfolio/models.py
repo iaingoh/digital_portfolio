@@ -5,9 +5,16 @@ from django.contrib.auth.models import User
 
 # TODO: create Project model
 
+class ProjectManager(models.Manager):
+    def get_subtitles(self, projectInstance):
+        project_id = projectInstance.id
+        subtitles = ProjectSubtitle.objects.filter(project=project_id)
+        return subtitles
+
 class Project(models.Model):
     title = models.CharField(max_length=100)
     img = models.ImageField(default='default.jpg')
+    objects = ProjectManager()
 
     def __str__(self):
         return self.title

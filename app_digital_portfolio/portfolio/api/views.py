@@ -1,9 +1,9 @@
 from portfolio.models import Project, ProjectSubtitle, BulletPoint
 from portfolio.api.serializers import (
+    ProjectDetailSerializer,
     ProjectSerializer,
-    ProjectSubtitleSerializer
 )
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 # from rest_framework import routers, serializers, viewsets
 
 # class ProjectSerializer(serializers.ModelSerializer):
@@ -32,6 +32,10 @@ from rest_framework.generics import ListAPIView
 class ProjectListAPIView(ListAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+
+class ProjectDetailAPIView(RetrieveAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectDetailSerializer
 
 class ProjectSubtitleListAPIView(ListAPIView):
     queryset = ProjectSubtitle.objects.all()
